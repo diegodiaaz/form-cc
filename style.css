@@ -111,6 +111,26 @@ input:focus {
   outline: 0.15rem solid #9333EA;
 }
 
+input:invalid:focus {
+  border: 0.15rem solid #FB7185;
+}
+
+/* deixa o "warning" desativado por padrão */
+input + .warning {
+  display: none;
+}
+
+/* ativa o "warning" sempre que o input estiver em foco e não preenchido */
+input:invalid:focus + .warning {
+  font-size: 1.4rem;
+  margin-top: .8rem;
+  color: #FB7185;
+
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
 .col-2 {
   gap: 2.4rem;
   align-items: center;
