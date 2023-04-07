@@ -10,6 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
   <title>Formulário de Cartão</title>
 </head>
 
@@ -22,11 +23,20 @@
     <section class="inputs flex">
       <div class="input-wrapper">
         <label for="cc-nuber"> Número do Cartão </label>
-        <input type="text" id="cc-number" placeholder="**** **** **** ****">
+        <input type="text" id="cc-number" placeholder="**** **** **** ****" required>
+        <div class="warning">
+          <img src="./assets/warning.svg" alt="ícone de alerta">
+          Número do cartão é obrigatório
+        </div>
       </div>
       <div class="input-wrapper">
         <label for="cc-holder"> Nome do Titular </label>
-        <input type="text" id="cc-holder" placeholder="Nome como está no cartão">
+        <input type="text" id="cc-holder" placeholder="Nome como está no cartão" required>
+        <!-- "required" serve para dizer que o input em questão é obrigatório -->
+        <div class="warning">
+          <img src="./assets/warning.svg" alt="ícone de alerta">
+          Nome do titular é obrigatório
+        </div>
       </div>
 
       <div class="col-2 flex">
@@ -36,7 +46,7 @@
         </div>
         <div class="input-wrapper">
           <label class="flex help" for="cc-cvv">CVV
-            <img src="https://i.ibb.co/P9nT6SN/question.png" 
+            <img src="./assets/question.svg" 
             alt="ícone de ajuda" 
             title="Esse número está, geralmente, na parte de trás do seu cartão">
           </label>
@@ -45,7 +55,7 @@
       </div>
     </section>
     <section class="info-security flex">
-      <img src="https://i.ibb.co/cLCwMsf/shieldcheck.png" alt="ícone de segurança">
+      <img src="./assets/shieldcheck.svg" alt="ícone de segurança">
       Seus dados estão seguros
     </section>
     <button>Adicionar Cartão</button>
